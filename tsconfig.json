@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "kuf-skeleton-loader": [
+        "dist/kuf-skeleton-loader"
+      ],
+      "kuf-skeleton-loader/*": [
+        "dist/kuf-skeleton-loader/*"
+      ]
+    }
   }
 }
