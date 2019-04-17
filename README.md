@@ -1,27 +1,41 @@
-# Libs
+# Kuf Skeleton loader
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+Simple component for rendering placeholder content.
 
-## Development server
+# Install
+```sh
+$ npm install kuf-skeleton-loader -save
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Setup
+You need to add `KufSkeletonLoaderModule` to your `app.module.ts`
 
-## Code scaffolding
+```sh
+@NgModule({
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        ...
+        KufSkeletonLoaderModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+})
+```
+After that, you can use the component in your templates and passing the Properties you want
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```sh
+<kuf-skeleton-loader [width]="'300px'" [height]="'20px'" [duration]="'1s'" [background]="'#eee'" [count]="20" radius></kuf-skeleton-loader>
+```
+### Properties
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+| Property | Default |  |
+| ------ | ------ | ------ |
+| width | 100% | Width of the skeleton can be px or %
+| height | 20px | Height of the skeleton can be px or %
+| background | #EFF1F6 | Background of the skeleton
+| duration | 2s | Background animation duration
+| count | 1 | Number of items
+| radius | 4px | Border radius of the skeleton
+| circle | 120px | 
